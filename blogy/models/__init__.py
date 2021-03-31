@@ -1,2 +1,2 @@
-from .article import Article
-from .author import Author
+from .Article import Article
+from .Author import Author

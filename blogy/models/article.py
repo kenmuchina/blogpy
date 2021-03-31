@@ -1,8 +1,8 @@
 from django.db import models
-from .author import Author
+from .Author import Author
 
 class Article(models.Model):
-    url = models.CharField(max_length=30)
+    url = models.SlugField(max_length=30)
     title = models.CharField(max_length=20)
     
     # Not sure which is appropriate
@@ -12,7 +12,7 @@ class Article(models.Model):
     
     author = models.ForeignKey(Author, on_delete=models.CASCADE)
     
-    timestamp = models.DateTimeField()
+    timestamp = models.DateTimeField(auto_now_add=True)
 
 
 
