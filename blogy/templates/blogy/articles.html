@@ -1,0 +1,24 @@
+
+{% extends "layout.html" %}
+
+<!-- Here we need to query the database and retrive articles and display one at a time.-->
+<!--Will use a loop to display a hr, img(), p with a truncated  first paragraph(50) and link to the article itself.-->
+<!-- Also, the articles will be displayed accordding to time with the most recent at the top.-->
+
+{% block header %}
+
+    <p>Do you know?</p>
+    
+{% endblock %}
+
+{% block content %}
+    
+    {%  for article in articles %}
+        <hr>
+        <h3>{{ article.title }}</h3>
+        <h3><a href="{%  %}">Read it here.</a></h3>
+        <br>
+    {% endfor %}
+
+{% endblock%} 
+

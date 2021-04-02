@@ -1,0 +1,11 @@
+
+{% extends "layout.html" %}
+
+<!--Later we will associate each article with a unique author. 
+Here, we will query authors details and pass them along as well: img, field, brief about.-->
+
+
+{% block header %}<h1>{{ article.title }}</h1>{% endblock %}
+
+{% block content %}<p>{{ article.content }}</p>{% endblock %}
+
